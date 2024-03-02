@@ -14,7 +14,7 @@ let mensagemTentativas = `Você descobriu o número secreto com 5 tentativas!`;
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
-    responsiveVoice.speak(texto,'Brazilian Portuguese Female', {rate:1.2});
+    responsiveVoice.speak(texto,'Brazilian Portuguese Female', {rate:1});
 }
 
 function exibirMensagemInicial() {
@@ -36,7 +36,7 @@ function verificarChute() {
             document.getElementById('reiniciar').removeAttribute('disabled');
     } else {
             if (chute > numeroSecreto) { 
-                exibirTextoNaTela ('p', '0 número secreto é menor');
+                exibirTextoNaTela ('p', 'O número secreto é menor');
             } else {
                     exibirTextoNaTela('p', 'O número secreto é maior');
             }
